@@ -36,11 +36,14 @@ const AddNewHotel = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch("http://localhost:3000/hotels", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://hotel-backend-git-main-kaushal-kishores-projects-52ddfca8.vercel.app/hotels",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      );
       window.location.reload();
       if (!response.ok) {
         throw "Failed to Add Hotel!!";
