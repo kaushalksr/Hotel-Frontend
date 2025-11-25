@@ -37,7 +37,7 @@ const AddNewHotel = () => {
     event.preventDefault();
     try {
       const response = await fetch(
-        "https://hotel-backend-git-main-kaushal-kishores-projects-52ddfca8.vercel.app/hotels",
+        "https://hotel-backend-lime.vercel.app/hotels",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

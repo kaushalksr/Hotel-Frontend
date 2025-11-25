@@ -3,7 +3,7 @@ import useFetch from "../useFetch";
 
 const ReadAllHotel = () => {
   const { data, loading, error } = useFetch(
-    "https://hotel-backend-git-main-kaushal-kishores-projects-52ddfca8.vercel.app/hotels"
+    "https://hotel-backend-lime.vercel.app/hotels"
   );
   const [message, setMessage] = useState("");
   let [hotel, setHotel] = useState([]);
@@ -15,7 +15,7 @@ const ReadAllHotel = () => {
   const handleDelete = async (hotelId) => {
     try {
       const response = await fetch(
-        `https://hotel-backend-git-main-kaushal-kishores-projects-52ddfca8.vercel.app/hotels/${hotelId}`,
+        `https://hotel-backend-lime.vercel.app/hotels/${hotelId}`,
         {
           method: "DELETE",
         }
